@@ -1,0 +1,102 @@
+@import '~vuetify/src/components/VDataTable/_variables.scss'
+
++theme(v-data-table) using ($material)
+  background-color: transparent
+ 
+  thead
+    tr
+      th
+        color: $y-text-color
+        white-space: nowrap
+        font-size: 15px
+        font-weight: 900
+
+        &.y-price-align
+          span
+            margin-left: 40px
+
+  tr
+    td
+      div.y-price-align
+        white-space: nowrap
+        span
+          min-width: 60px
+          display: inline-block
+          text-align: right
+      
+      div.y-row-actions
+        white-space: nowrap
+        text-align: right
+
+        .v-icon
+          font-size: 16px
+
+          &.mdi-pencil
+            color: $y-color-green
+
+          &.mdi-delete
+            color: $y-color-red
+
+  .v-toolbar__title
+    color: $y-color-grey
+
+  &.y-error
+    .v-data-table__empty-wrapper
+      color: $y-color-red
+      font-weight: bold 
+
+  &.y-sortable
+    table
+      thead.v-data-table-header
+        tr:last-child 
+          th
+            border-top: 2px solid $y-border-color
+            border-bottom: 2px solid $y-border-color
+            background: $y-table-hover-background-color
+            padding-top: 4px
+            height: 40px
+            text-transform: uppercase
+            font-size: 14px
+
+            &.active
+              color: $y-color-blue
+
+              span
+                border-bottom: solid 2px $y-color-blue
+                padding-bottom: 7px
+                &:after
+                  padding-left: 7px
+                  font-family: $y-icon-font-family
+                  content: $y-table-asc-content
+
+            &.desc
+              span:after
+                content: $y-table-desc-content
+
+            .v-icon
+              display: none
+
+  &.y-fixed-layout
+    .v-data-table__wrapper
+      overflow-x: hidden
+      table
+        table-layout: fixed
+
+
+  &.y-single-line
+    .v-data-table__wrapper
+      overflow-x: hidden
+
+      tbody
+        tr
+          td
+            position: relative
+            .text-overflow
+              white-space: nowrap
+              overflow: hidden
+              text-overflow: ellipsis
+              position: absolute
+              top: 5px
+              width: 90%
+
+

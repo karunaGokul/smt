@@ -1,0 +1,49 @@
+.v-text-field--filled.v-text-field--single-line.v-input--dense input
+    margin-top: 0px
+
+.v-select.v-select--is-menu-active .v-input__icon--append .v-icon.mdi-magnify
+    transform: none
+
+.flex-nowrap
+    .v-select__selections
+        flex-wrap: nowrap
+        .d-flex
+            width: 100%
+        
+.v-select.v-input--dense
+    .v-input__icon--clear
+        .v-icon
+            font-size: 12px
+
+.v-btn--outlined
+    span
+        overflow: hidden
+        display: block
+        width: 100%
+        text-overflow: ellipsis
+
+a[disabled]
+    pointer-events: none
+    cursor: default
+    text-decoration: none
+    color: $y-disabled !important
+
+.v-application
+    .v-dialog
+        .error--text
+            color: rgba(0, 0, 0, 0.54) !important
+
+            &.v-input--is-dirty
+                color: $y-color-red !important
+                
+                .error--text
+                    color: $y-color-red !important
+
+            &.v-input--is-focused
+                color: $y-color-red !important
+                
+                .error--text
+                    color: $y-color-red !important
+
+            .v-messages__message
+                color: $y-color-red !important
